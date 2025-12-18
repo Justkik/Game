@@ -1,94 +1,97 @@
 @echo off
 chcp 65001 >nul
-title MAIN MENU - GAME LAUNCHER
+title GAME LAUNCHER - NO SWITCHING
 color 0A
 cls
 
+echo =================================
+echo     GAME LAUNCHER v3.0
+echo =================================
+echo Shows games WITHOUT switching branches
+echo.
+pause
+
 :menu
+cls
 echo ================================
-echo     LAUNCH GAME FROM BRANCH
+echo     SELECT GAME TO VIEW
 echo ================================
 echo.
-echo 1. Launch Sanya Game
-echo 2. Launch Sergey Game
-echo 3. Launch Nikita Game
+echo     [1] SANYA GAME (C++/Raylib)
+echo     [2] SERGEY GAME (Visual Studio)
+echo     [3] NIKITA GAME (compile.bat)
 echo.
-echo 4. Quick View All
-echo 0. Exit
+echo     [0] Exit
 echo.
-set /p c="Choice: "
+set /p choice="Your choice: "
 
-if "%c%"=="1" goto launch_sanya
-if "%c%"=="2" goto launch_sergey
-if "%c%"=="3" goto launch_nikita
-if "%c%"=="4" goto quick_view
-if "%c%"=="0" exit
+if "%choice%"=="1" goto show_sanya
+if "%choice%"=="2" goto show_sergey
+if "%choice%"=="3" goto show_nikita
+if "%choice%"=="0" exit
 
-echo Invalid!
+echo Invalid choice!
 pause
 goto menu
 
-:launch_sanya
+:show_sanya
 cls
-echo Launching Sanya Game...
-echo Switching to sanya_game...
-git checkout sanya_game
+echo ================================
+echo      SANYA GAME - C++/Raylib
+echo ================================
 echo.
-if exist "launch.bat" (
-    call launch.bat
-) else (
-    echo ERROR: launch.bat not found in sanya_game branch!
-    echo Ask Sanya to create launch.bat
+echo Files in sanya_game branch:
+git ls-tree -r sanya_game --name-only
+echo.
+echo Main.cpp code:
+git show sanya_game:main.cpp
+echo.
+echo TO LAUNCH THIS GAME:
+echo 1. Switch to sanya_game: git checkout sanya_game
+echo 2. Compile: g++ main.cpp Game.cpp Locale.cpp -lraylib
+echo 3. Run: game.exe
+echo.
+pause
+goto menu
+
+:show_sergey
+cls
+echo ================================
+echo   SERGEY GAME - Visual Studio
+echo ================================
+echo.
+echo Files in Sergey branch:
+git ls-tree -r Сергей-----игра --name-only 2>nul || (
+    echo Cannot list files directly.
+    echo Branch name has special characters.
 )
 echo.
-echo Returning to main...
-git checkout main
+echo PROJECT STRUCTURE:
+echo - SGayGame.sln (Visual Studio solution)
+echo - SGayGame/ (project folder)
+echo - x64/ (compiled files)
+echo.
+echo TO LAUNCH THIS GAME:
+echo 1. Switch to branch: git checkout Сергей-----игра
+echo 2. Open SGayGame.sln in Visual Studio
+echo 3. Press F5 to run
+echo.
 pause
 goto menu
 
-:launch_sergey
+:show_nikita
 cls
-echo Launching Sergey Game...
-echo Switching to Sergey branch...
-git checkout Сергей-----игра
+echo ================================
+echo      NIKITA GAME
+echo ================================
 echo.
-if exist "launch.bat" (
-    call launch.bat
-) else (
-    echo ERROR: launch.bat not found!
-    dir
-)
+echo Files in Nikita branch:
+git ls-tree -r Nikita---game --name-only
 echo.
-echo Returning to main...
-git checkout main
-pause
-goto menu
-
-:launch_nikita
-cls
-echo Launching Nikita Game...
-echo Switching to Nikita branch...
-git checkout Nikita---game
-echo.
-if exist "launch.bat" (
-    call launch.bat
-) else (
-    echo ERROR: launch.bat not found!
-    dir
-)
-echo.
-echo Returning to main...
-git checkout main
-pause
-goto menu
-
-:quick_view
-cls
-echo QUICK VIEW ALL BRANCHES:
-echo.
-echo sanya_game: C++ with Raylib
-echo Сергей-----игра: Visual Studio project
-echo Nikita---game: Has compile.bat
+echo TO LAUNCH THIS GAME:
+echo 1. Switch to branch: git checkout Nikita---game
+echo 2. Check for compile.bat
+echo 3. Run: call compile.bat
 echo.
 pause
 goto menu
