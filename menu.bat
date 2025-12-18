@@ -1,34 +1,27 @@
 @echo off
-title GAMES MENU
-cls
-
 echo ========================
-echo     CHOOSE GAME
+echo     GAMES MENU
 echo ========================
 echo.
-echo 1. Sanya (main.cpp + Raylib)
-echo 2. Sergey (SGayGame.cpp)
-echo 3. Nikita (compile.bat)
+echo 1. sanya_game
+echo 2. Check other branches
+echo 0. Exit
 echo.
-set /p c="Select: "
+set /p c="Choice: "
 
 if "%c%"=="1" (
+    echo Switching to sanya_game...
     git checkout sanya_game
-    if exist "main.cpp" g++ main.cpp Game.cpp Locale.cpp -o game.exe -lraylib
-    if exist "game.exe" game.exe & del game.exe
+    echo Files in sanya_game:
+    dir *.cpp *.h
+    pause
     git checkout main
 )
 
 if "%c%"=="2" (
-    git checkout Сергей-----игра
-    if exist "SGayGame.cpp" g++ SGayGame.cpp -o game.exe && game.exe
-    git checkout main
-)
-
-if "%c%"=="3" (
-    git checkout Nikita---game
-    if exist "compile.bat" call compile.bat
-    git checkout main
+    echo All branches:
+    git branch -a
+    pause
 )
 
 pause
