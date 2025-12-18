@@ -1,6 +1,8 @@
 #include "Game.h"
 #include <algorithm>
 #include <cmath>
+#include <cstdio>
+#include <cstring>
 
 // English strings
 const char* englishStrings[] = {
@@ -712,7 +714,7 @@ void Game::DrawMainMenu() {
 
     // High Score
     char hsText[50];
-    sprintf_s(hsText, "%s%d", englishStrings[5], highScore);
+    sprintf(hsText, "%s%d", englishStrings[5], highScore);
     DrawRussianText(hsText, 20, 20, 25, YELLOW);
 }
 
@@ -768,7 +770,7 @@ void Game::DrawDifficultyMenu() {
     }
 
     char planetText[50];
-    sprintf_s(planetText, "%s%s", englishStrings[11], planetName);
+    sprintf(planetText, "%s%s", englishStrings[11], planetName);
     DrawRussianText(planetText, 400, 160, 25, YELLOW);
 
     // Difficulty buttons
@@ -832,10 +834,10 @@ void Game::DrawCountdown() {
     char countText[10];
 
     if (count > 0) {
-        sprintf_s(countText, "%d", count);
+        sprintf(countText, "%d", count);
     }
     else {
-        strcpy_s(countText, englishStrings[25]);
+        strcpy(countText, englishStrings[25]);
     }
 
     int fontSize = (count > 0) ? 100 : 60;
@@ -869,7 +871,7 @@ void Game::DrawPlaying() {
 
     // Интерфейс
     char scoreText[50];
-    sprintf_s(scoreText, "%s%d", englishStrings[17], score);
+    sprintf(scoreText, "%s%d", englishStrings[17], score);
     DrawRussianText(scoreText, 20, 20, 30, YELLOW);
 
     // Информация о планете и сложности
@@ -888,7 +890,7 @@ void Game::DrawPlaying() {
     }
 
     char infoText[100];
-    sprintf_s(infoText, "%s%s | %s%s", englishStrings[18], planetName, englishStrings[19], diffName);
+    sprintf(infoText, "%s%s | %s%s", englishStrings[18], planetName, englishStrings[19], diffName);
     DrawRussianText(infoText, 20, 60, 20, GREEN);
 
     // Уведомление о новом факте
@@ -998,7 +1000,7 @@ void Game::DrawGameOver() {
     DrawRussianText(englishStrings[35], 1024 / 2 - MeasureRussianText(englishStrings[35], 50) / 2, 200, 50, RED);
 
     char scoreText[50];
-    sprintf_s(scoreText, "%s%d", englishStrings[36], score);
+    sprintf(scoreText, "%s%d", englishStrings[36], score);
     DrawRussianText(scoreText, 1024 / 2 - MeasureRussianText(scoreText, 40) / 2, 280, 40, YELLOW);
 
     if (score > highScore) {

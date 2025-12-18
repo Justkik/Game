@@ -1,6 +1,6 @@
 #include "Locale.h"
 #include <iostream>
-#include <raylib.h>
+#include "raylib.h"
 
 LocaleSystem locale;
 
