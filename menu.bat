@@ -1,73 +1,130 @@
 @echo off
 chcp 65001 >nul
-title GAMES LAUNCHER
+title C++ GAMES LAUNCHER
+color 0A
 cls
 
 echo =================================
-echo     GAMES LAUNCHER - FINAL
+echo     C++ GAMES LAUNCHER
 echo =================================
-echo Teacher: Each game has build instructions!
+echo Compiles and runs C++ games automatically.
+echo Teacher's PC has all compilers.
 echo.
 pause
 
 :menu
 cls
 echo ================================
-echo     SELECT GAME
+echo     SELECT C++ GAME TO RUN
 echo ================================
 echo.
-echo 1. Sanya Game (has build_and_run.bat)
-echo 2. Sergey Game (Visual Studio .sln)
-echo 3. Nikita Game (has compile.bat)
+echo     [1] COMPILE & RUN SANYA GAME
+echo     [2] COMPILE & RUN SERGEY GAME
+echo     [3] RUN NIKITA GAME
 echo.
-echo 0. Exit
+echo     [0] Exit
 echo.
-set /p c="Choice: "
+set /p choice="Choice: "
 
-if "%c%"=="1" goto sanya_info
-if "%c%"=="2" goto sergey_info
-if "%c%"=="3" goto nikita_info
-if "%c%"=="0" exit
+if "%choice%"=="1" goto compile_sanya
+if "%choice%"=="2" goto compile_sergey
+if "%choice%"=="3" goto run_nikita
+if "%choice%"=="0" exit
 
 echo Invalid!
 pause
 goto menu
 
-:sanya_info
+:compile_sanya
 cls
-echo ===== SANYA GAME =====
+echo ================================
+echo   COMPILING SANYA GAME (C++/Raylib)
+echo ================================
 echo.
-echo INSTRUCTIONS:
-echo 1. Switch to branch: git checkout sanya_game
-echo 2. Run: build_and_run.bat
-echo 3. Or compile manually (see README)
+echo Step 1: Getting files from sanya_game branch...
+git checkout sanya_game
 echo.
-echo FILES:
-git ls-tree -r sanya_game --name-only | findstr "\.cpp \.h \.bat \.txt" | head -15
+echo Step 2: Compiling with Raylib...
+g++ main.cpp Game.cpp Locale.cpp -o sanya_game_now.exe -lraylib -lopengl32 -lgdi32 -lwinmm 2>nul
+if errorlevel 1 (
+    echo ERROR: Raylib not found or compilation failed!
+    echo.
+    echo Showing code instead:
+    echo ====================
+    type main.cpp
+) else (
+    echo COMPILATION SUCCESSFUL!
+    echo.
+    echo Step 3: Running game...
+    echo.
+    sanya_game_now.exe
+    del sanya_game_now.exe 2>nul
+)
 echo.
+echo Step 4: Returning to main...
+git checkout main
 pause
 goto menu
 
-:sergey_info
+:compile_sergey
 cls
-echo ===== SERGEY GAME =====
+echo ================================
+echo   COMPILING SERGEY GAME (C++)
+echo ================================
 echo.
-echo INSTRUCTIONS:
-echo 1. Switch to branch: git checkout Сергей-----игра
-echo 2. Open SGayGame.sln in Visual Studio
-echo 3. Press F5
+echo Step 1: Switching to Sergey's branch...
+git checkout Сергей-----игра
 echo.
+echo Step 2: Looking for C++ files...
+dir *.cpp *.h 2>nul
+echo.
+echo Step 3: Trying to compile...
+if exist "*.cpp" (
+    g++ *.cpp -o sergey_game_now.exe 2>nul
+    if exist "sergey_game_now.exe" (
+        echo COMPILED! Running...
+        sergey_game_now.exe
+        del sergey_game_now.exe 2>nul
+    ) else (
+        echo Compilation failed. This is Visual Studio project.
+        echo Open SGayGame.sln in Visual Studio.
+    )
+) else (
+    echo No .cpp files found. This is Visual Studio project.
+)
+echo.
+echo Step 4: Returning to main...
+git checkout main
 pause
 goto menu
 
-:nikita_info
+:run_nikita
 cls
-echo ===== NIKITA GAME =====
+echo ================================
+echo   RUNNING NIKITA GAME
+echo ================================
 echo.
-echo INSTRUCTIONS:
-echo 1. Switch to branch: git checkout Nikita---game
-echo 2. Check for compile.bat
-echo 3. Run it
+echo Step 1: Switching to Nikita's branch...
+git checkout Nikita---game
 echo.
+echo Step 2: Checking for launcher...
+if exist "compile.bat" (
+    echo Found compile.bat! Running...
+    echo.
+    call compile.bat
+) else if exist "*.cpp" (
+    echo Found C++ files! Compiling...
+    g++ *.cpp -o nikita_game_now.exe 2>nul
+    if exist "nikita_game_now.exe" (
+        nikita_game_now.exe
+        del nikita_game_now.exe 2>nul
+    )
+) else (
+    echo No launcher found. Files:
+    dir
+)
+echo.
+echo Step 3: Returning to main...
+git checkout main
 pause
 goto menu
