@@ -1,0 +1,46 @@
+﻿  ThreeGamesCollection.cpp
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(48,32): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(60,62): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(85,21): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(86,21): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(88,26): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(88,23): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(138,29): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(144,29): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(206,51): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(206,35): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(208,49): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(208,37): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(209,60): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(209,35): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(239,81): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(239,51): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(281,94): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(281,52): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(462,39): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(463,63): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(484,41): warning C4838: Преобразование из "int" в "float" требует сужающего преобразования.
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(484,41): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(495,29): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(494,67): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(499,82): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(499,65): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(764,64): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(764,46): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(768,68): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(768,44): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(769,73): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(769,49): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(772,56): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(772,40): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(1246,114): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(1246,68): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(1266,114): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(1266,68): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(1309,62): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(1308,80): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(1385,114): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(1385,68): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(1413,108): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Nikita\source\repos\ThreeGamesCollection\ThreeGamesCollection\ThreeGamesCollection.cpp(1413,68): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+  ThreeGamesCollection.vcxproj -> C:\Users\Nikita\source\repos\ThreeGamesCollection\x64\Debug\ThreeGamesCollection.exe
