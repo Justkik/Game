@@ -1,0 +1,9 @@
+// resources.rc
+DINO_IMAGE     RCDATA  "images/dino.png"
+SHIP_IMAGE     RCDATA  "images/ship.png"
+BACKGROUND_IMG RCDATA  "images/gamefon.jpg"
+MENU_BG_IMG    RCDATA  "images/glav.jpg"
+CLOUD_IMG      RCDATA  "images/obl.jpg"
+JUMP_SOUND     RCDATA  "sounds/jump.wav"
+CRASH_SOUND    RCDATA  "sounds/crash.wav"
+CLICK_SOUND    RCDATA  "sounds/click.wav"
